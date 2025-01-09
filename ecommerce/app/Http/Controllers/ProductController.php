@@ -2,22 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreHomeRequest;
-use App\Http\Requests\UpdateHomeRequest;
-use App\Models\Home;
-use App\Models\Menu;
 use App\Models\Product;
+use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $menus = Menu::all();
-        $products = Product::all();
-        return view('homepage', compact('menus','products'));
+        //
     }
 
     /**
@@ -31,7 +26,7 @@ class HomeController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreHomeRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -39,7 +34,7 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Home $home)
+    public function show(Product $product)
     {
         //
     }
@@ -47,7 +42,7 @@ class HomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Home $home)
+    public function edit(Product $product)
     {
         //
     }
@@ -55,7 +50,7 @@ class HomeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateHomeRequest $request, Home $home)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -63,7 +58,7 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Home $home)
+    public function destroy(Product $product)
     {
         //
     }
