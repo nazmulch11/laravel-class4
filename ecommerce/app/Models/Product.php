@@ -8,6 +8,15 @@ class Product extends Model
 {
     //
     // protected $table = 'products';
+    protected $fillable = [
+        'product_name',
+        'description',
+        'price',
+        'stock',
+        'status',
+        'category_id',
+        'user_id',
+    ];
 
 
     public function category()
